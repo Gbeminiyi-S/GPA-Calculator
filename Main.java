@@ -73,6 +73,6 @@ public class Main {
         }
         System.out.println("|--------------------------------------------------|\n");
         double gpa = averageFunction(courses);
-        System.out.printf("Your GPA = %.2f", gpa);
+        System.out.printf("Your GPA = %.2f\n", gpa);
     }
 }
