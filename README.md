@@ -6,7 +6,7 @@ Welcome to the GPA Calculator, a Java program designed to help you calculate you
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/GPA-Calculator.git
+   git clone https://github.com/Gbeminiyi-S/GPA-Calculator.git
    cd GPA-Calculator
    ```
 
