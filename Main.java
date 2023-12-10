@@ -6,8 +6,8 @@ public class Main {
         Scanner input = new Scanner(System.in);
         int index = 0, unit, score, noOfCourses;
 
-        System.out.println("Welcome to your personal GPA calculator");
-        System.out.println("*******************************************");
+        System.out.println("\nWelcome to your personal GPA calculator\n");
+        System.out.println("*******************************************\n");
         System.out.print("How many courses do you want to compute for? ");
 
         noOfCourses = validateInput(input, 1, Integer.MAX_VALUE);
@@ -16,11 +16,11 @@ public class Main {
 
         try {
             while (index < noOfCourses) {
-                System.out.printf("Enter the details for course %d\n\tCourse name: ", index + 1);
+                System.out.printf("\nEnter the details for course %d\n\n\tCourse name: ", index + 1);
                 String code = input.nextLine();
-                System.out.print("\tCourse unit (min: 1, max:6): ");
+                System.out.print("\n\tCourse unit (min: 1, max:6): ");
                 unit = validateInput(input, 1, 6);
-                System.out.print("\tScore (min: 0, max: 100): ");
+                System.out.print("\n\tScore (min: 0, max: 100): ");
                 score = validateInput(input, 0, 100);
 
                 CourseInfo course = new CourseInfo(code, unit, score);
@@ -28,7 +28,7 @@ public class Main {
                 index++;
             }
         } catch (InputMismatchException ex) {
-            System.out.println("\t\tYou have entered a non-integer value. Please re-enter details for the course.");
+            System.out.println("\n\t\tYou have entered a non-integer value. Please re-enter details for the course.");
         } finally {
             input.close();
         }
@@ -41,13 +41,13 @@ public class Main {
             try {
                 value = input.nextInt();
                 if (value < lowerBound || value > upperBound) {
-                    System.out.printf("\t\tEnter a value between %d and %d: ", lowerBound, upperBound);
+                    System.out.printf("\n\t\tEnter a value between %d and %d: ", lowerBound, upperBound);
                 } else {
                     input.nextLine();
                     break;
                 }
             } catch (InputMismatchException ex) {
-                System.out.print("\t\tInvalid input. Please enter a valid integer: ");
+                System.out.print("\n\t\tInvalid input. Please enter a valid integer: ");
                 input.nextLine();
             }
         }
